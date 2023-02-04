@@ -45,8 +45,8 @@ function clickButton() {
                 clearDisplay();
                 updateDisplay();
             }
-            else if(buttons[i].classList.contains('backspace')){
-                inputBackspace();
+            else if(buttons[i].classList.contains('ln')){
+                ln(displayValue);
                 updateDisplay();
             }
             else if(buttons[i].classList.contains('squared')){
@@ -216,9 +216,6 @@ function updateDisplay() {
     display.textContent = displayValue;
 }
 
-function inputBackspace() {
-    if(firstOperand != null) {
-        firstOperand = null;
-        updateDisplay();
-    }
+function ln(x) {
+    return Math.log(x);
 }

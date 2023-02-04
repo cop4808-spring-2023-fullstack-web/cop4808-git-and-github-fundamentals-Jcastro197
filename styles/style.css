@@ -56,17 +56,29 @@ button {
 .sqrt {
     background-color: rgb(126, 73, 126);
 }
+.sqrt:active {
+    background-color: rgb(144, 72, 144);
+}
 
 .squared{
     background-color: rgb(126, 73, 126);
 }
+.squared:active {
+    background-color: rgb(144, 72, 144);
+}
 
-.cubed{
+.cube{
     background-color: rgb(126, 73, 126);
+}
+.cube:active {
+    background-color: rgb(144, 72, 144);
 }
 
 .ln{
     background-color: rgb(126, 73, 126);
+}
+.ln:active {
+    background-color: rgb(144, 72, 144);
 }
 
 
