@@ -41,9 +41,26 @@ function clickButton() {
             } else if(buttons[i].classList.contains('sign')) {
                 inputSign(displayValue);
                 updateDisplay();
-            } else if(buttons[i].classList.contains('clear'))
+            } else if(buttons[i].classList.contains('clear')){
                 clearDisplay();
                 updateDisplay();
+            }
+            else if(buttons[i].classList.contains('backspace')){
+                inputBackspace();
+                updateDisplay();
+            }
+            else if(buttons[i].classList.contains('squared')){
+                inputSquare(displayValue);
+                updateDisplay();
+            }
+            else if(buttons[i].classList.contains('sqrt')){
+                squareRoot(displayValue);
+                updateDisplay();
+            }
+            else if(buttons[i].classList.contains('cube')){
+                cube(displayValue);
+                updateDisplay();
+            }
         }
     )}
 }
@@ -181,4 +198,27 @@ function operate(x, y, op) {
 
 function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
+}
+
+function inputSquare(num) {
+    displayValue = (num * num).toString();
+}
+
+function squareRoot(num) {
+    displayValue = Math.sqrt(num).toString();
+}
+
+function cube(num) {
+    displayValue = (num * num * num).toString();
+}
+
+function updateDisplay() {
+    display.textContent = displayValue;
+}
+
+function inputBackspace() {
+    if(firstOperand != null) {
+        firstOperand = null;
+        updateDisplay();
+    }
 }

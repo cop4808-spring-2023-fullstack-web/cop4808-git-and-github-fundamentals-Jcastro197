@@ -53,9 +53,22 @@ button {
     grid-column: span 2;
 }
 
-.special {
+.sqrt {
     background-color: rgb(126, 73, 126);
 }
+
+.squared{
+    background-color: rgb(126, 73, 126);
+}
+
+.cubed{
+    background-color: rgb(126, 73, 126);
+}
+
+.ln{
+    background-color: rgb(126, 73, 126);
+}
+
 
 .operator {
     background-color: #FF8F1F;    
