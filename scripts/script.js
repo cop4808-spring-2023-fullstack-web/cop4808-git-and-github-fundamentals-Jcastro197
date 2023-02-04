@@ -201,6 +201,11 @@ function roundAccurately(num, places) {
     return parseFloat(Math.round(num + 'e' + places) + 'e-' + places);
 }
 
+/*
+updates display with current value
+squares, square roots,ln and cubes are handled here
+used toFixed() to limit the number of decimal places
+ */
 function inputSquare(num) {
     displayValue = Math.pow(num,2).toFixed(7);
 }
