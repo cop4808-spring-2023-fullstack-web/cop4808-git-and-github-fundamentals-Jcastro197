@@ -1,4 +1,5 @@
-let displayValue = '0';
+let displayValue = 0;
+displayValue.toFixed(7);
 let firstOperand = null;
 let secondOperand = null;
 let firstOperator = null;
@@ -201,21 +202,18 @@ function roundAccurately(num, places) {
 }
 
 function inputSquare(num) {
-    displayValue = (num * num).toString();
+    displayValue = Math.pow(num,2).toFixed(7);
 }
 
 function squareRoot(num) {
-    displayValue = Math.sqrt(num).toString();
+    displayValue = Math.sqrt(num).toFixed(7);
 }
 
 function cube(num) {
-    displayValue = (num * num * num).toString();
-}
-
-function updateDisplay() {
-    display.textContent = displayValue;
+    let x = 3;
+    displayValue = Math.pow(num,x).toFixed(7);
 }
 
 function ln(x) {
-    return Math.log(x);
+    displayValue = Math.log(x).toFixed(7);
 }
